@@ -4,10 +4,11 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { QuoteFormComponent } from './quote-form/quote-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent
+    AppComponent,HeaderComponent, QuoteFormComponent
   ],
   imports: [
     BrowserModule,
