@@ -14,9 +14,9 @@
                     <input type="text" class="input">
                 </div>
             </div>
-            <p class="title">Full quote</p>
-            <p class="title">Full quote</p>
-            <button class="button is-link">Dodaj citat</button>
+            <p class="title">'{{text}}'-{{author}}</p>
+            <p class="title" [innerText]="fullQuote"></p>
+            <button class="button is-link" (click)="onAddQuote()">Dodaj citat</button>
         </div>
     </div>
 </div>

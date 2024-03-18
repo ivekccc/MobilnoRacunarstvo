@@ -6,5 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './quote-form.component.css'
 })
 export class QuoteFormComponent {
-
+  text='quote';
+  author='author';
+  fullQuote='full quote';
+  onAddQuote():void{
+    console.log('Quote added');
+    this.fullQuote=`'${this.text}' - '${this.author}'`
+  }
 }
