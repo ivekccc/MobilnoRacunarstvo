@@ -5,13 +5,13 @@
             <div class="field">
                 <label class="label">Quote</label>
                 <div class="control">
-                    <input type="text" class="input">
+                    <input type="text" class="input" [(ngModel)]="text">
                 </div>
             </div>
             <div class="field">
                 <label class="label">Author</label>
                 <div class="control">
-                    <input type="text" class="input">
+                    <input type="text" class="input" [(ngModel)]="author">
                 </div>
             </div>
             <p class="title">'{{text}}'-{{author}}</p>
