@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Quote } from './quote.model';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'angular-mobrac-klipovi';
+  quotes:Quote[]=[new Quote("Carpe Diem","Heorcu"),
+                  new Quote("Ja sam najbolji","ivan")];
 }
