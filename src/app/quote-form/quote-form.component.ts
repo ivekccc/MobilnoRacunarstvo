@@ -1,6 +1,7 @@
 import { Component, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core'; // Correct import
 import { Quote } from '../quote.model';
+import { QuoteService } from '../quote.service';
 
 @Component({
   selector: 'app-quote-form',
@@ -14,10 +15,15 @@ export class QuoteFormComponent {
 
   @Output() addedQuote = new EventEmitter<Quote>();
 
+  constructor(private quotesService:QuoteService){
+
+  }
+
   onAddQuote(): void {
     console.log('Quote added');
     const newQuote = new Quote(this.text, this.author);
-    this.addedQuote.emit(newQuote);
+    //this.addedQuote.emit(newQuote);
+    this.quotesService.addQuote(newQuote);
     this.fullQuote = `'${this.text}' - '${this.author}'`;
   }
 }
