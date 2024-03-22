@@ -13,6 +13,7 @@ export class AppComponent {
                   new Quote("Ja sam najbolji","ivan")];*/
 
   quotes:Quote[]=this.quotesServise.quotes;
+  show:boolean=true;
 
   addQuote(quote:Quote):void{
    // this.quotes.push(quote);
