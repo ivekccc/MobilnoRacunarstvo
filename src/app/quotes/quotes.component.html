@@ -1,1 +1,5 @@
-<p>quotes works!</p>
+<div class="has-text-centered" style="margin-top: 12px;">
+    <button class="button is-link" (click)="onAddQuote()">Add quote</button>
+</div>
+<router-outlet></router-outlet>
+<app-quote-element *ngFor="let quote of quotes"[author]="quote.author" [text]="quote.text"></app-quote-element>

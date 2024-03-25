@@ -26,4 +26,7 @@ export class QuoteFormComponent {
     this.quotesService.addQuote(newQuote);
     this.fullQuote = `'${this.text}' - '${this.author}'`;
   }
+  getTitle():string{
+    return "Naslov";
+  }
 }
