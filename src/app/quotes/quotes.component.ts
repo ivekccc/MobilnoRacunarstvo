@@ -18,4 +18,7 @@ export class QuotesComponent {
   onAddQuote(){
     this.router.navigateByUrl('/quotes/new')
   }
+  onEditQuote(quote:Quote){
+    this.router.navigate(['quotes',quote.id,'edit'],{queryParams:{text:quote.text,author:quote.author}})
+  }
 }

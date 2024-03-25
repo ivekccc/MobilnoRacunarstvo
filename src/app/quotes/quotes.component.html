@@ -2,4 +2,5 @@
     <button class="button is-link" (click)="onAddQuote()">Add quote</button>
 </div>
 <router-outlet></router-outlet>
-<app-quote-element *ngFor="let quote of quotes"[author]="quote.author" [text]="quote.text"></app-quote-element>
+
+<app-quote-element *ngFor="let quote of quotes"[author]="quote.author" [text]="quote.text" (click)="onEditQuote(quote)"></app-quote-element>

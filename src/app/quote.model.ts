@@ -1,4 +1,4 @@
 export class Quote{
-    constructor(public text:string,public author:string){
+    constructor(public id:string,public text:string,public author:string){
     }
 }
