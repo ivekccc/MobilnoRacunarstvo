@@ -2,7 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { EventEmitter } from '@angular/core'; // Correct import
 import { Quote } from '../quote.model';
 import { QuoteService } from '../quote.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 
 @Component({
   selector: 'app-quote-form',
@@ -20,8 +20,10 @@ export class QuoteFormComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    this.text=this.route.snapshot.queryParams['text'];
-    this.author=this.route.snapshot.queryParams['author'];
+    this.route.queryParams.subscribe((queryParams:Params)=>{
+      this.text=queryParams['text'];
+      this.author=queryParams['author'];
+    })
   }
 
   onAddQuote(): void {
