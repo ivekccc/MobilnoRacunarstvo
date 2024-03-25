@@ -12,15 +12,14 @@ export class AppComponent {
   /*quotes:Quote[]=[new Quote("Carpe Diem","Heorcu"),
                   new Quote("Ja sam najbolji","ivan")];*/
 
-  quotes:Quote[]=this.quotesServise.quotes;
-  show:boolean=true;
+  quotes:Quote[];
 
-  addQuote(quote:Quote):void{
-   // this.quotes.push(quote);
-  }
+
 
   constructor(private quotesServise:QuoteService){
-
+    this.quotes=this.quotesServise.quotes;
   }
-
+ addQuote(quote:Quote):void{
+   // this.quotes.push(quote);
+  }
 }

@@ -7,15 +7,20 @@ import { HeaderComponent } from './header/header.component';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
 import { QuoteElementComponent } from './quote-element/quote-element.component';
+import { HomeComponent } from './home/home.component';
+import { QuotesComponent } from './quotes/quotes.component';
+import { FunFactsComponent } from './fun-facts/fun-facts.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent,HeaderComponent, QuoteFormComponent, QuoteElementComponent
+    AppComponent,HeaderComponent, QuoteFormComponent, QuoteElementComponent, HomeComponent, QuotesComponent, FunFactsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [
     provideClientHydration()

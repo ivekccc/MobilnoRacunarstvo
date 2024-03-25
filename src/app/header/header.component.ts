@@ -7,5 +7,9 @@ import { Component } from "@angular/core";
 })
 
 export class HeaderComponent{
-    title="Quotes";
+    title="MMK";
+
+    getTitle():string{
+        return 'Quotes'
+    }
 }
